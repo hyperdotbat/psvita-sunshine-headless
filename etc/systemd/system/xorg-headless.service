@@ -1,0 +1,12 @@
+[Unit]
+Description=Headless Xorg Server for Sunshine
+After=network.target
+
+[Service]
+User=hyper
+Environment=DISPLAY=:0
+ExecStart=/usr/bin/Xorg :0 -noreset -nolisten tcp -novtswitch -ac
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

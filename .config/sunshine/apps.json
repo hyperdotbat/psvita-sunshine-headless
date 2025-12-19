@@ -1,0 +1,28 @@
+{
+    "apps": [
+        {
+            "auto-detach": true,
+            "cmd": [],
+            "detached": [
+                "$(HOME)/.local/bin/gamescope-steam.sh"
+            ],
+            "elevated": false,
+            "exclude-global-prep-cmd": false,
+            "exit-timeout": 5,
+            "image-path": "steam.png",
+            "name": "Steam Gamescope",
+            "output": "",
+            "prep-cmd": [
+                {
+                    "do": "",
+                    "undo": "$(HOME)/.local/bin/sunshine-end.sh"
+                }
+            ],
+            "wait-all": true,
+            "working-dir": "$(HOME)"
+        }
+    ],
+    "env": {
+        "PATH": "$(PATH):$(HOME)/.local/bin"
+    }
+}
